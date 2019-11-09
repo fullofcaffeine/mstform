@@ -16,6 +16,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   output: {
+    globalObject: 'typeof self !== \'undefined\' ? self : this',
     filename: "mstform.js",
     path: path.resolve(__dirname, "dist"),
     library: "mstform",
