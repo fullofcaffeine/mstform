@@ -77,7 +77,7 @@ test("value for repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ bar: "BAR" }] });

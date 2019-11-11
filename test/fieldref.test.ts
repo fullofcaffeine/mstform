@@ -28,7 +28,7 @@ test("fieldref", () => {
     field: new Field(converters.string),
     repeating: new RepeatingForm({
       repeatingField: new Field(converters.string)
-    }),
+    }) as any,
     sub: new SubForm({
       subField: new Field(converters.string)
     })

@@ -978,7 +978,7 @@ test("error messages and repeating form", async () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const state = form.state(o, {
@@ -1208,7 +1208,7 @@ test("backend process controls field access for repeating form", async () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const state = form.state(o, {

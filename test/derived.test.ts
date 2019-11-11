@@ -73,7 +73,7 @@ test("calculated repeating", () => {
       }),
       a: new Field(converters.number),
       b: new Field(converters.number)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ calculated: 0, a: 1, b: 2 }] });
@@ -124,7 +124,7 @@ test("calculated repeating push and remove", () => {
       }),
       a: new Field(converters.number),
       b: new Field(converters.number)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ calculated: 0, a: 1, b: 2 }] });
@@ -217,7 +217,7 @@ test("calculated with addModeDefaults", () => {
       }),
       a: new Field(converters.number),
       b: new Field(converters.number)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ calculated: 0, a: 1, b: 2 }] });

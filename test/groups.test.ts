@@ -259,7 +259,7 @@ test("groups repeating form", () => {
         one: new Group({ include: ["a", "b"] }),
         two: new Group({ include: ["c", "d"] })
       }
-    )
+    ) as any
   });
 
   const o = M.create({ items: [{ a: 1, b: 2, c: 3, d: 4 }] });
@@ -312,7 +312,7 @@ test("groups repeating form exclude", () => {
         one: new Group({ exclude: ["a", "b"] }),
         two: new Group({ exclude: ["c", "d"] })
       }
-    )
+    ) as any
   });
 
   const o = M.create({ items: [{ a: 1, b: 2, c: 3, d: 4 }] });
@@ -438,7 +438,7 @@ test("groups with warnings in repeatingform", () => {
     {
       foo: new RepeatingForm({
         bar: new Field(converters.string)
-      })
+      }) as any
     },
     {
       one: new Group({ include: ["foo"] })

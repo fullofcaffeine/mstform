@@ -168,7 +168,7 @@ test("warning in repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ bar: "correct" }, { bar: "incorrect" }] });
@@ -240,7 +240,7 @@ test("error on repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [] });
@@ -278,7 +278,7 @@ test("warning on repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [] });
@@ -319,7 +319,7 @@ test("error on indexed repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ bar: "correct" }, { bar: "incorrect" }] });
@@ -352,7 +352,7 @@ test("warning on indexed repeating form", () => {
   const form = new Form(M, {
     foo: new RepeatingForm({
       bar: new Field(converters.string)
-    })
+    }) as any
   });
 
   const o = M.create({ foo: [{ bar: "correct" }, { bar: "incorrect" }] });

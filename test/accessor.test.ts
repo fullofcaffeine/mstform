@@ -36,7 +36,7 @@ test("accessByPath repeating form", () => {
   const form = new Form(M, {
     entries: new RepeatingForm({
       foo: new Field(converters.number)
-    })
+    }) as any
   });
 
   const o = M.create({ entries: [{ foo: 3, bar: 4 }] });
